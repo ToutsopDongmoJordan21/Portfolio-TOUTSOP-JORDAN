@@ -1,19 +1,8 @@
 {
-    "version": 2,
-    "outputDirectory": "dist/portfolio-jordan/browser",
-    "builds": [
-      {
-        "src": "package.json",
-        "use": "@vercel/static-build",
-        "config": {
-          "distDir": "dist/portfolio-jordan"
-        }
-      }
-    ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "destination": "/index.html"
-      }
+    "buildCommand": "npm run build",
+    "outputDirectory": "dist/portfolio-jordan",
+    "framework": "angular",
+    "rewrites": [
+      { "source": "/(.*)", "destination": "/index.html" }
     ]
   }
