@@ -1,5 +1,6 @@
 {
     "version": 2,
+    "outputDirectory": "dist/portfolio-jordan/browser",
     "builds": [
       {
         "src": "package.json",
@@ -12,7 +13,7 @@
     "routes": [
       {
         "src": "/(.*)",
-        "dest": "/index.html"
+        "destination": "/index.html"
       }
     ]
   }
