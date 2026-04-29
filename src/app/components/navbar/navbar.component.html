@@ -1,0 +1,54 @@
+<nav class="navbar" [class.scrolled]="isScrolled">
+  <div class="nav-container">
+    <!-- Logo -->
+    <div class="nav-logo" (click)="scrollTo('hero')">
+      <span class="logo-bracket">&lt;</span>
+      <span class="logo-name">JTD</span>
+      <span class="logo-bracket">/&gt;</span>
+    </div>
+
+    <!-- Desktop Nav -->
+    <ul class="nav-links">
+      <li *ngFor="let item of navItems">
+        <a
+          [class.active]="activeSection === item.id"
+          (click)="scrollTo(item.id)"
+          href="javascript:void(0)">
+          {{ item.label }}
+        </a>
+      </li>
+    </ul>
+
+    <!-- CTA -->
+    <a href="mailto:jordantoutsop472@gmail.com" class="nav-cta btn btn-primary">
+      <i class="fas fa-paper-plane"></i>
+      Embauchez-moi
+    </a>
+
+    <!-- Hamburger -->
+    <button class="hamburger" (click)="toggleMenu()" [class.open]="isMenuOpen">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" [class.open]="isMenuOpen">
+    <ul>
+      <li *ngFor="let item of navItems">
+        <a
+          [class.active]="activeSection === item.id"
+          (click)="scrollTo(item.id)"
+          href="javascript:void(0)">
+          {{ item.label }}
+        </a>
+      </li>
+      <li>
+        <a href="mailto:jordantoutsop472@gmail.com" class="mobile-cta">
+          <i class="fas fa-paper-plane"></i> Embauchez-moi
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>

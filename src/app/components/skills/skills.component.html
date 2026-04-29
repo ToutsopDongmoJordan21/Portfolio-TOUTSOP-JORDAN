@@ -1,0 +1,46 @@
+<section id="skills" class="skills">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Compétences</span>
+      <h2 class="section-title">Mes <span>Technologies</span></h2>
+    </div>
+
+    <!-- Category Filter -->
+    <div class="filter-bar">
+      <button
+        *ngFor="let cat of categories"
+        class="filter-btn"
+        [class.active]="activeCategory === cat"
+        (click)="filterSkills(cat)">
+        {{ cat }}
+      </button>
+    </div>
+
+    <!-- Tech Skills Grid -->
+    <div class="skills-grid">
+      <div class="skill-card card" *ngFor="let skill of filteredSkills">
+        <div class="skill-header">
+          <span class="skill-name">{{ skill.name }}</span>
+          <span class="skill-percent">{{ skill.level }}%</span>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-fill" [style.width.%]="skill.level" [style.background]="getBarColor(skill.level)"></div>
+        </div>
+        <span class="skill-category">{{ skill.category }}</span>
+      </div>
+    </div>
+
+    <!-- Soft Skills -->
+    <div class="soft-skills-section">
+      <h3 class="soft-title">Compétences Transversales</h3>
+      <div class="soft-grid">
+        <div class="soft-card card" *ngFor="let skill of softSkills">
+          <div class="soft-icon">
+            <i [class]="skill.icon"></i>
+          </div>
+          <span class="soft-name">{{ skill.name }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

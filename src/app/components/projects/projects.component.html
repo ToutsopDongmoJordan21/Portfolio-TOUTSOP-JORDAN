@@ -1,0 +1,45 @@
+<section id="projects" class="projects">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Portfolio</span>
+      <h2 class="section-title">Travaux <span>Réalisés</span></h2>
+    </div>
+
+    <div class="projects-grid">
+      <div class="project-card card" *ngFor="let project of projects; let i = index">
+        <div class="project-icon">
+          <i [class]="project.icon"></i>
+        </div>
+        <div class="project-content">
+          <h3 class="project-name">{{ project.name }}</h3>
+          <p class="project-desc">{{ project.description }}</p>
+          <div class="project-tech">
+            <span class="tech-pill" *ngFor="let t of project.tech">{{ t }}</span>
+          </div>
+        </div>
+        <div class="project-actions">
+          <a [href]="project.url" target="_blank" class="btn btn-outline project-link">
+            <i class="fas fa-external-link-alt"></i>
+            Voir le projet
+          </a>
+        </div>
+        <div class="project-number">0{{ i + 1 }}</div>
+      </div>
+    </div>
+
+    <!-- GitHub CTA -->
+    <div class="github-cta">
+      <div class="github-cta-content">
+        <i class="fab fa-github"></i>
+        <div>
+          <h3>Voir plus sur GitHub</h3>
+          <p>Découvrez tous mes projets open source et contributions</p>
+        </div>
+        <a href="https://github.com/ToutsopDongmoJordan21" target="_blank" class="btn btn-primary">
+          <i class="fab fa-github"></i>
+          Mon GitHub
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

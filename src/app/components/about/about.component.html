@@ -1,0 +1,108 @@
+<section id="about" class="about">
+  <div class="glow-dot" style="width:400px;height:400px;background:radial-gradient(circle,rgba(124,58,237,0.07) 0%,transparent 70%);top:0;right:0;pointer-events:none;position:absolute;"></div>
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">À Propos</span>
+      <h2 class="section-title">Qui suis-<span>je</span> ?</h2>
+    </div>
+
+    <div class="about-grid">
+      <!-- Left: Info -->
+      <div class="about-info">
+        <div class="about-card card">
+          <div class="about-avatar">
+            <img src="assets/images/jordan.jpg" alt="Jordan" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div class="avatar-fallback">JTD</div>
+          </div>
+          <div class="about-meta">
+            <h3>Jordan Toutsop Dongmo</h3>
+            <p class="about-role">Ingénieur en Génie Logicielle</p>
+            <div class="about-contacts">
+              <div class="contact-row">
+                <i class="fas fa-map-marker-alt"></i>
+                <span>Yaoundé / Douala, Cameroun</span>
+              </div>
+              <div class="contact-row">
+                <i class="fas fa-phone"></i>
+                <span>(+237) 681409045 / 699028439</span>
+              </div>
+              <div class="contact-row">
+                <i class="fas fa-envelope"></i>
+                <span>jordantoutsop472@gmail.com</span>
+              </div>
+              <div class="contact-row">
+                <i class="fab fa-github"></i>
+                <a href="https://github.com/ToutsopDongmoJordan21" target="_blank">GitHub</a>
+              </div>
+              <div class="contact-row">
+                <i class="fab fa-linkedin"></i>
+                <a href="https://www.linkedin.com/in/jordan-toutsop-6b2b731a1/" target="_blank">LinkedIn</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Languages -->
+        <div class="lang-card card">
+          <h4><i class="fas fa-globe"></i> Langues</h4>
+          <div class="lang-list">
+            <div class="lang-item" *ngFor="let lang of languages">
+              <div class="lang-header">
+                <span class="lang-name">{{ lang.name }}</span>
+                <span class="lang-level">{{ lang.level }}</span>
+              </div>
+              <div class="lang-bar">
+                <div class="lang-fill" [style.width.%]="lang.percent"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Description + Education -->
+      <div class="about-details">
+        <div class="about-description card">
+          <p>
+            Passionné par les technologies et le développement logiciel, je suis un ingénieur full stack avec
+            <strong>plus de 5 ans d'expérience</strong> au Cameroun. Je conçois des solutions robustes allant des
+            applications web et mobiles à l'administration réseau et à l'intelligence artificielle.
+          </p>
+          <p>
+            Ma formation à l'<strong>Université de Buea</strong> m'a doté d'une base solide en génie logiciel,
+            que j'ai enrichie par des expériences variées dans plusieurs entreprises camerounaises et internationales.
+          </p>
+          <p>
+            Je m'investis dans chaque projet avec rigueur et créativité, en cherchant toujours à livrer
+            des solutions de <strong>haute qualité</strong> dans les délais impartis.
+          </p>
+          <div class="about-interests">
+            <span class="interest-tag"><i class="fas fa-futbol"></i> Sport</span>
+            <span class="interest-tag"><i class="fas fa-book"></i> Lecture</span>
+            <span class="interest-tag"><i class="fas fa-gamepad"></i> Jeux Vidéos</span>
+            <span class="interest-tag"><i class="fas fa-plane"></i> Voyages</span>
+          </div>
+        </div>
+
+        <!-- Education timeline -->
+        <div class="education-section">
+          <h3 class="sub-title"><i class="fas fa-graduation-cap"></i> Formation</h3>
+          <div class="edu-timeline">
+            <div class="edu-item" *ngFor="let edu of education; let i = index">
+              <div class="edu-dot" [class.first]="i === 0"></div>
+              <div class="edu-content card">
+                <div class="edu-header">
+                  <div>
+                    <h4>{{ edu.degree }}</h4>
+                    <p class="edu-school">{{ edu.school }}</p>
+                  </div>
+                  <span class="edu-period">{{ edu.period }}</span>
+                </div>
+                <p class="edu-desc">{{ edu.description }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

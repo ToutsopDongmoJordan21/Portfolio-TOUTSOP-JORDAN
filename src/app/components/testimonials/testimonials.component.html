@@ -1,0 +1,62 @@
+<section id="testimonials" class="testimonials">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Références</span>
+      <h2 class="section-title">Ce qu'on dit de <span>moi</span></h2>
+    </div>
+
+    <div class="testimonials-wrapper">
+      <!-- Main Card -->
+      <div class="testimonial-main">
+        <div class="quote-icon"><i class="fas fa-quote-left"></i></div>
+        <div class="testimonial-card card" *ngIf="testimonials[activeIndex] as t">
+          <div class="stars">
+            <i class="fas fa-star" *ngFor="let s of getStars(t.rating)"></i>
+          </div>
+          <p class="testimonial-text">{{ t.text }}</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">{{ t.avatar }}</div>
+            <div class="author-info">
+              <h4>{{ t.name }}</h4>
+              <p>{{ t.role }}</p>
+              <span>{{ t.company }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <div class="testimonial-controls">
+        <button class="ctrl-btn" (click)="prev()">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <div class="dots">
+          <span
+            class="dot"
+            *ngFor="let t of testimonials; let i = index"
+            [class.active]="i === activeIndex"
+            (click)="goTo(i)">
+          </span>
+        </div>
+        <button class="ctrl-btn" (click)="next()">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+
+      <!-- Thumbnail list -->
+      <div class="testimonials-thumbs">
+        <div
+          class="thumb-item"
+          *ngFor="let t of testimonials; let i = index"
+          [class.active]="i === activeIndex"
+          (click)="goTo(i)">
+          <div class="thumb-avatar">{{ t.avatar }}</div>
+          <div class="thumb-info">
+            <span class="thumb-name">{{ t.name }}</span>
+            <span class="thumb-company">{{ t.company }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

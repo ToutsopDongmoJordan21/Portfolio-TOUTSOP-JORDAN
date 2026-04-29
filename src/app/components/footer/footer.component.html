@@ -1,0 +1,67 @@
+<footer class="footer">
+  <div class="footer-top">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Brand -->
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <span class="logo-bracket">&lt;</span>JTD<span class="logo-bracket">/&gt;</span>
+          </div>
+          <p>Ingénieur en Génie Logicielle passionné par la création de solutions digitales innovantes et performantes.</p>
+          <div class="footer-socials">
+            <a href="https://github.com/ToutsopDongmoJordan21" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/jordan-toutsop-6b2b731a1/" target="_blank">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="mailto:jordantoutsop472@gmail.com">
+              <i class="fas fa-envelope"></i>
+            </a>
+            <a href="tel:+237681409045">
+              <i class="fas fa-phone"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="footer-nav">
+          <h4>Navigation</h4>
+          <ul>
+            <li *ngFor="let item of navItems">
+              <a href="javascript:void(0)" (click)="scrollTo(item.id)">{{ item.label }}</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact quick -->
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <div class="footer-contact-list">
+            <div class="footer-contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Yaoundé / Douala, Cameroun</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fas fa-phone"></i>
+              <span>(+237) 681409045 / 699028439</span>
+            </div>
+            <div class="footer-contact-item">
+              <i class="fas fa-envelope"></i>
+              <a href="mailto:jordantoutsop472@gmail.com">jordantoutsop472@gmail.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="container">
+      <p>© {{ year }} Jordan Toutsop Dongmo. Tous droits réservés.</p>
+      <button class="back-to-top" (click)="scrollToTop()">
+        <i class="fas fa-arrow-up"></i>
+      </button>
+    </div>
+  </div>
+</footer>
