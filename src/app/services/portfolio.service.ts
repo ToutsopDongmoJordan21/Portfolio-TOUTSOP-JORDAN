@@ -221,7 +221,7 @@ export class PortfolioService {
         icon: 'fas fa-credit-card'
       },
       {
-        name: 'Check Tatoo',
+        name: 'CheckTatoo',
         description: 'Plateforme de certification de conformité de ENEO, DGI, CAMWATER.',
         url: 'https://www.checktatoo.com/fr/',
         tech: ['WINDEV', 'WEBDEV', 'WinDev Mobile', 'HFSQL', 'ALM', 'Méthodes Agiles'],
