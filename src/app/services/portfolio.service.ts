@@ -8,7 +8,7 @@ export class PortfolioService {
       name: 'Jordan Toutsop Dongmo',
       title: 'Ingénieur en Génie Logicielle',
       subtitle: 'Full Stack Developer & Network Administrator',
-      description: 'Ingénieur logiciel axé sur les résultats avec plus de cinq ans d\'expérience dans le développement full stack. Maîtrise de plusieurs langages et technologies de programmation.',
+      description: 'Ingénieur logiciel axé sur les résultats avec plus de six ans d\'expérience dans le développement full stack. Maîtrise de plusieurs langages et technologies de programmation.',
       email: 'jordantoutsop472@gmail.com',
       phone1: '(+237) 681409045',
       phone2: '(+237) 699028439',
@@ -42,8 +42,12 @@ export class PortfolioService {
       { name: 'Communication', icon: 'fas fa-comments' },
       { name: 'Structure des données', icon: 'fas fa-database' },
       { name: 'Algorithmes', icon: 'fas fa-code-branch' },
-      { name: 'Conception OO', icon: 'fas fa-object-group' },
+      { name: 'Conception ', icon: 'fas fa-object-group' },
       { name: 'Leadership', icon: 'fas fa-crown' },
+      { name: 'Organisé et rigoureux', icon: 'fas fa-tasks' },
+      { name: 'Créatif et curieux', icon: 'fas fa-lightbulb' },
+      { name: 'Orienté business', icon: 'fas fa-shield-alt' },
+      { name: 'Gestion du temps', icon: 'fas fa-clock' },
     ];
   }
 
