@@ -286,7 +286,7 @@ export class PortfolioService {
         role: 'Coordinator, Dept of Computer Engineering',
         company: 'Université de Buea',
         avatar: 'SL',
-        text: 'Jordan est un étudiant exceptionnel qui s\'est démarqué par ses compétences techniques avancées et sa rigueur dans les projets. Sa capacité à analyser des problèmes complexes et à proposer des solutions innovantes est remarquable.',
+        text: 'Jordan étais un étudiant exceptionnel qui s\'est démarqué par ses compétences techniques avancées et sa rigueur dans les projets. Sa capacité à analyser des problèmes complexes et à proposer des solutions innovantes est remarquable.',
         rating: 5
       },
       {
